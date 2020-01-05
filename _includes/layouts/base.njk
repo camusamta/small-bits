@@ -13,13 +13,19 @@
     <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
-      {#- Read more about `eleventy-navigation` at https://github.com/11ty/eleventy-navigation #}
+      <nav aria-label="main">
+      <!-- {#- Read more about `eleventy-navigation` at https://github.com/11ty/eleventy-navigation #}
       {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
         listClass: "nav",
         listItemClass: "nav-item",
         activeListItemClass: "nav-item-active",
         activeKey: eleventyNavigation.key
-      }) | safe }}
+      }) | safe }} -->
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Archive</a></li>
+      </ul>
+        </nav>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>

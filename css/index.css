@@ -1,4 +1,5 @@
 :root {
+  /* these will need to be polyfilled */
   --red: #C5004A;
   --darkred: #7F0036;
   --lightgray: #e0e0e0;
@@ -19,6 +20,27 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
 }
+
+html {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+body {
+
+  width: 50ch;
+}
+
+h1 {
+
+  font-size: 3rem;
+  font-family: monospace;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -115,12 +137,7 @@ pre {
 }
 
 /* Header */
-.home {
-  padding: 0 1rem;
-  float: left;
-  margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
-}
+
 .home :link:not(:hover) {
   text-decoration: none;
 }
